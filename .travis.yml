@@ -4,11 +4,11 @@ services:
   - docker
 
 stages:
-  - compile
+  - build
   - test
 jobs:
   include:
     - stage: build
-      script: ./build
+      script: ./build.sh
     - stage: test
-      script: ./test
+      script: ./test.sh
