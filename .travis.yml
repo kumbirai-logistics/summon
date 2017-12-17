@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+stages:
+  - build
+  - test
+jobs:
+  include:
+    - stage: build
+      script: ./build.sh
+    - stage: test
+      script: ./test.sh
